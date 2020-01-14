@@ -1,0 +1,33 @@
+# /etc/conf.d/herbstersd: config file for /etc/init.d/herbstersd
+
+# Config file location
+#herbstersd_CONFIGFILE="/etc/herbsters/herbsters.conf"
+
+# What directory to write pidfile to?  (created and owned by $herbstersd_USER)
+#herbstersd_PIDDIR="/var/run/herbstersd"
+
+# What filename to give the pidfile
+#herbstersd_PIDFILE="${herbstersd_PIDDIR}/herbstersd.pid"
+
+# Where to write herbstersd data (be mindful that the blockchain is large)
+#herbstersd_DATADIR="/var/lib/herbstersd"
+
+# User and group to own herbstersd process
+#herbstersd_USER="herbsters"
+#herbstersd_GROUP="herbsters"
+
+# Path to herbstersd executable
+#herbstersd_BIN="/usr/bin/herbstersd"
+
+# Nice value to run herbstersd under
+#herbstersd_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#herbstersd_OPTS=""
+
+# The timeout in seconds OpenRC will wait for herbstersd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+herbstersd_SIGTERM_TIMEOUT=60
